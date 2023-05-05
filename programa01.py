@@ -102,11 +102,10 @@ def main(): #Funcao recebe main(menu)
                 print("Encaminhando para o próximo atendente disponível")  #imprima a mensagem
                 print("Deixe seu número, entraremos em contato com urgência!") # "  "
                 whats_user=int(input("Número whats com ddd:")) #Whats_user recebe numero inteiros digitado pelo usuario
-                #print (mensagem de encerramento)
-                #falta um break
+                print("Aguarde 30 minutos, agradecemos o contato.") #Imprima a mensagem
+                break # interrompe a funcao
                 
-                
-        # Assinatura de contrato        
+        # 4- Assinatura de contrato        
         elif entrada_inicial == 4: #Se a entrada_inicial for igual a 4;
             email_user=str(input("Digite seu email para envio na copia assinada")) #Recebe dados do usuario em string(mensagem)
             assinatura=str(input("digite seu nome completo com a frase de segurança enviada por email para assinatura digital")) # "  "
