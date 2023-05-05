@@ -1,7 +1,5 @@
 # ## Step 01
 
-
-
 def prints_tela_inicial(): #Funcao recebe prints_tela_inicial 
      #printar todas as mensagem abaixo para o usuario
     print("Bem vindo ao sistema Connect AI") #Imprima a mensagem
@@ -70,7 +68,7 @@ def main(): #Funcao recebe main(menu)
             if user_option == 1 or user_option == 2: #Se o user_option for igual a 1 ou user_option for igual a 2 
                 print("Encaminhando para o próximo atendente disponível") #Imprima a mensagem
                 print("Deixe seu número, entraremos em contato com urgência!")  # "  "
-                whats_user=int(input("Número do whats com ddd:")) #Whats_user recebe numeros inteiros digitado pelo usuario
+                whats_user=int(input("Número do whats com ddd: ")) #Whats_user recebe numeros inteiros digitado pelo usuario
                 print("Obrigado, Connect AI agradece seu contato, logo entraremos em contato") #Imprima a mensagem
                 break #Interrompe a função
             
@@ -85,31 +83,38 @@ def main(): #Funcao recebe main(menu)
 
         # 3 - Financeiro
         elif entrada_inicial == 3:  #Se a entrada_inicial for igual a 3;
-            print("Selecione uma das opções disponíveis abaixo") #Imprima a mensagem
-            print("1 - Segunda via de conta") # " "
+            print("\nSelecione uma das opções disponíveis abaixo: ") #Imprima a mensagem
+            print("\n1 - Segunda via de conta") # " "
             print("2 - Falar com atendente") # " "
-            print("4 - Para retornar ao menu inicial") # " "
-            print("5 - Encerrar atendimento") # " "
-            user_option = int(input("Digite uma opção: ")) #user_oprtion recebe numeros inteiros digitado pelo usuario
+            print("3 - Para retornar ao menu inicial") # " "
+            print("4 - Encerrar atendimento") # " "
+            user_option = int(input("\nDigite uma opção: ")) #user_oprtion recebe numeros inteiros digitado pelo usuario
             
             
             if user_option == 1: #Se user_option for igual a 1
-                email_user=str(input("Digite seu email para recebimento: ")) #email recebe string (mensagem) dado pelo usuario. 
+                email_user=str(input("\nDigite seu email para recebimento: ")) #email recebe string (mensagem) dado pelo usuario. 
                 print("Aguarde 30 minutos, agradecemos o contato.") #Imprima a mensagem
                 break #Interrompe a função
 
             elif user_option == 2: #Se o user_option for igual a 2
-                print("Encaminhando para o próximo atendente disponível")  #imprima a mensagem
+                print("\nEncaminhando para o próximo atendente disponível...")  #imprima a mensagem
                 print("Deixe seu número, entraremos em contato com urgência!") # "  "
-                whats_user=int(input("Número whats com ddd:")) #Whats_user recebe numero inteiros digitado pelo usuario
-                print("Aguarde 30 minutos, agradecemos o contato.") #Imprima a mensagem
+                whats_user=int(input("\nDigite seu numero do whatsapp com ddd: ")) #Whats_user recebe numero inteiros digitado pelo usuario
+                print("\nAguarde 30 minutos, agradecemos o contato.") #Imprima a mensagem
                 break # interrompe a funcao
-                
+
+            elif user_option == 3: #Se  o user_option for igual a 3
+                main()  # chama a função principal e reinicia o ciclo  
+
+            elif user_option == 4:
+                break
+
         # 4- Assinatura de contrato        
         elif entrada_inicial == 4: #Se a entrada_inicial for igual a 4;
-            email_user=str(input("Digite seu email para envio na copia assinada")) #Recebe dados do usuario em string(mensagem)
-            assinatura=str(input("digite seu nome completo com a frase de segurança enviada por email para assinatura digital")) # "  "
-            print("Aguarde 30 minutos, confirmação por email, agradecemos o contato.") #Imprima a mensagem
+            email_user = str(input("\nDigite seu email para envio na copia assinada: ")) #Recebe dados do usuario em string(mensagem)
+            assinatura = str(input("Digite seu nome completo: ")) # "  "
+            codigo_seguranca = str(input("Digite a frase de segurança enviada por email, para assinatura digital: "))
+            print("\nAguarde 30 minutos, confirmação por email, agradecemos o contato.") #Imprima a mensagem
             break #Interrompe a função
 
         else: #Senão
